@@ -1,0 +1,11 @@
+# Dependências do Node (Essencial: não envie esta pasta para o GitHub)
+node_modules/
+
+# Logs de erros do NPM
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de sistema operacional (Mac/Windows)
+.DS_Store
+Thumbs.db

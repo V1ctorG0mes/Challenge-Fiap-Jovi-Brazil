@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera Jovi</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/script.js" defer></script>
+
+  <style>
+    /* Esconde a barra de rolagem no menu de modos de foto para ficar igual a um app nativo */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="relative w-full min-h-[80vh] overflow-hidden flex flex-col justify-center">
+
+      <!-- Video Hero -->
+      <video autoplay loop muted playsinline poster="./images/poster-azul.png" class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="./images/Jovi-bg-video.mp4" type="video/mp4">
+      </video>
+
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-md max-w-5xl mx-auto leading-tight font-jovi-titulo">
+          Explore Sua Criatividade Com Jovi
+        </h1>
+        <p class="text-lg md:text-xl mb-8 font-jovi-texto">
+          Capture os melhores momentos com a mais alta tecnologia.
+        </p>
+        <a href="#conteudomain" class="bg-azul-jovi hover:bg-azul-jovi-hover text-white font-semibold py-2.5 px-8 rounded-2xl transition duration-300">
+          Teste Agora
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Fim do Hero -->
+
+
+
+
+  <!-- Conteudo Main -->
+  <section id="conteudomain" class="bg-white py-16">
+    <div class="container mx-auto px-4">
+
+      <!-- TÍTULO PRINCIPAL -->
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">
+        Câmeras Que Escrevem Histórias
+      </h2>
+
+      <!-- MENU DE ABAS (TABS) -->
+      <div class="flex justify-start md:justify-center items-center gap-6 md:gap-12 border-b border-gray-200 mb-12 overflow-x-auto no-scrollbar pb-1 px-4 md:px-0">
+
+        <!-- Aba 1: Celulares (Ativa por padrão) -->
+        <button data-tab="celulares" class="tab-btn text-blue-600 font-bold border-b-2 border-blue-600 pb-2 transition-colors duration-200 whitespace-nowrap cursor-pointer">
+          Celulares
+        </button>
+
+
+        <!-- Aba 2: Galeria Inteligente -->
+        <button data-tab="galeria" class="tab-btn text-gray-500 hover:text-gray-800 font-normal border-b-2 border-transparent pb-2 transition-colors duration-200 whitespace-nowrap cursor-pointer">
+          Galeria Inteligente
+        </button>
+
+
+        <!-- Aba 3: Compartilhamento -->
+        <button data-tab="compartilhamento" class="tab-btn text-gray-500 hover:text-gray-800 font-normal border-b-2 border-transparent pb-2 transition-colors duration-200 whitespace-nowrap cursor-pointer">
+          Compartilhamento
+        </button>
+
+
+        <!-- Aba 4: Exemplo de fotos -->
+        <button data-tab="exemplo-fotos" class="tab-btn text-gray-500 hover:text-gray-800 font-normal border-b-2 border-transparent pb-2 transition-colors duration-200 whitespace-nowrap cursor-pointer">
+          Exemplo de fotos
+        </button>
+
+      </div>
+
+
+
+      <!-- CONTEÚDO DAS ABAS -->
+
+      <div id="tab-contents" class="max-w-4xl mx-auto">
+
+
+
+        <!-- Conteúdo 1: Celulares (Visível por padrão) -->
+        <!-- CONTEÚDO DA ABA: CELULARES -->
+        <div id="tab-celulares" class="tab-panel block">
+
+          <div class="bg-gray-50/80 border border-gray-100 rounded-2xl p-6 text-center mb-8 max-w-4xl mx-auto">
+            <h3 class="text-lg font-bold text-gray-900">Linha de Celulares Jovi</h3>
+            <p class="text-sm text-gray-500 mt-1">Confira os mais novos modelos de smartphones da Jovi equipados com câmeras avançadas.</p>
+          </div>
+
+          <!-- Grid Principal (2 colunas no Desktop) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+
+            <!-- BOTÃO: X300 Ultra -->
+            <button onclick="abrirSimulador('X300 Ultra')" class="bg-[#f8f9fa] rounded-3xl p-8 flex flex-col items-center text-center justify-between shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 cursor-pointer border-none text-left w-full">
+              <div class="w-full flex flex-col items-center">
+                <img src="./images/jovi-x300-ultra.png" alt="Jovi X300 Ultra" class="h-64 object-contain mb-6 drop-shadow-md">
+                <h4 class="text-3xl font-bold text-gray-900 mb-6 font-sansation">X300 Ultra</h4>
+
+                  <div class="space-y-4 text-sm text-gray-700 max-w-xs font-sansation">
+                    <p class="text-base"><strong class="text-gray-900 font-bold">Câmera Principal:</strong> 200 MP com (OIS)</p>
+                    <p class="text-base"><strong class="text-gray-900 font-bold">Câmera Periscópica:</strong> 200 MP com (OIS) para zoom de alta resolução.</p>
+                    <p class="text-base"><strong class="text-gray-900 font-bold">Câmera Ultra Grande-Angular:</strong> 50 MP para paisagens amplas</p>
+                    <p class="text-base"><strong class="text-gray-900 font-bold">Câmera Frontal:</strong> 50 MP</p>
+                    <p class="text-base"><strong class="text-gray-900 font-bold">Recursos de Vídeo:</strong> Gravação em até 8K na câmera traseira e vídeos em 4K com HDR na frontal e traseira.</p>
+                    <p class="text-base"><strong class="text-gray-900 font-bold">Extensores de Telefoto:</strong> Duas lentes externas adicionais (equivalentes a 200mm e 400mm) para aumentar o alcance do zoom óptico.</p>
+                    <p class="text-base"><strong class="text-gray-900 font-bold">Acessórios:</strong> Anel adaptador para filtros, capas profissionais e suporte para tripé.</p>
+                  </div>
+                </div>
+            </button>
+
+            <!-- COLUNA DIREITA: X300 FE e V70 -->
+            <div class="flex flex-col gap-6">
+
+              <!-- BOTÃO: X300 FE -->
+              <button onclick="abrirSimulador('X300 FE')" class="bg-[#f8f9fa] rounded-3xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 cursor-pointer border-none w-full">
+                <img src="./images/jovi-x300fe.png" alt="Jovi X300 FE" class="h-40 object-contain mb-4 drop-shadow-md">
+                <h4 class="text-2xl font-bold text-gray-900 mb-4 font-sansation">X300 FE</h4>
+                <div class="space-y-3 text-sm text-gray-700 max-w-xs font-sansation">
+                  <p><strong class="text-gray-900 font-bold">Câmera Principal:</strong> 50 MP com (OIS) e abertura de lente</p>
+                  <p><strong class="text-gray-900 font-bold">Câmera Super Telefoto:</strong> 50 MP com zoom óptico de 3x e recursos periscópicos.</p>
+                  <p><strong class="text-gray-900 font-bold">Câmera Frontal:</strong> 50 MP para selfies e videochamadas detalhadas</p>
+                </div>
+              </button>
+
+              <!-- BOTÃO: V70 -->
+              <button onclick="abrirSimulador('V70')" class="bg-[#f8f9fa] rounded-3xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 cursor-pointer border-none w-full">
+                <img src="./images/jovi-v70.png" alt="Jovi V70" class="h-40 object-contain mb-4 drop-shadow-md">
+                <h4 class="text-2xl font-bold text-gray-900 mb-4 font-sansation">V70</h4>
+                <div class="space-y-3 text-sm text-gray-700 max-w-xs font-sansation">
+                  <p><strong class="text-gray-900 font-bold">Câmera Principal:</strong> 200 MP com OIS e zoom digital detalhado.</p>
+                  <p><strong class="text-gray-900 font-bold">Câmera Ultra-wide:</strong> 8 MP que auxilia em fotos amplas e no modo retrato</p>
+                  <p><strong class="text-gray-900 font-bold">Câmera Frontal:</strong> 32 MP posicionada em furo na tela.</p>
+                </div>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- Conteúdo 2: Galeria Inteligente (Oculto) -->
+      <!-- CONTEÚDO DA ABA: GALERIA INTELIGENTE -->
+      <div id="tab-galeria" class="tab-panel hidden">
+
+        <!-- Cabeçalho da Galeria -->
+        <div class="bg-gray-50/80 border border-gray-100 rounded-2xl p-6 text-center mb-8 max-w-4xl mx-auto">
+          <h3 class="text-lg font-bold text-gray-900">Galeria Inteligente</h3>
+          <p class="text-sm text-gray-500 mt-1">Organização automática das suas fotos em tempo real.</p>
+        </div>
+
+        <!-- O Container Vazio (Onde as fotos vão entrar) -->
+        <div id="grid-galeria-inteligente" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- As fotos tiradas vão aparecer aqui dinamicamente -->
+        </div>
+      </div>
+
+
+
+
+
+      <!-- Conteúdo 3: Compartilhamento (Oculto) -->
+      <div id="tab-compartilhamento" class="tab-panel hidden">
+
+        <div class="bg-gray-50/80 border border-gray-100 rounded-2xl p-6 text-center mb-8 max-w-4xl mx-auto">
+          <h3 class="text-lg font-bold text-gray-900">Compartilhamento Instantâneo</h3>
+          <p class="text-sm text-gray-500 mt-1">Envie suas fotos diretamente para a nuvem ou redes sociais em alta resolução.</p>
+        </div>
+
+        <!-- CONTAINER VAZIO: O JavaScript vai "injetar" as colunas aqui dentro -->
+        <div id="container-compartilhamento" class="flex flex-col gap-8 max-w-5xl mx-auto"></div>
+      </div>
+
+
+
+
+
+
+      <!-- Conteúdo 4: Exemplo de Fotos -->
+      <div id="tab-exemplo-fotos" class="tab-panel hidden">
+
+        <div class="bg-gray-50/80 border border-gray-100 rounded-2xl p-6 text-center mb-8 max-w-4xl mx-auto">
+          <h3 class="text-lg font-bold text-gray-900">Exemplo de Fotos</h3>
+          <p class="text-sm text-gray-500 mt-1">Veja fotos tiradas por fotógrafos profissionais utilizando os dispositivos Jovi. <br>Todas as fotos disponíveis no instagram: @jovi.brasil</p>
+        </div>
+
+        <!-- Grid de Fotos: 1 coluna no mobile, 4 colunas no desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-6xl mx-auto px-4 md:px-0">
+
+          <!-- === LINHA 1: X300 ULTRA === -->
+          <!-- Foto Celular (Sem clique) -->
+          <div class="rounded-3xl overflow-hidden bg-gray-100 flex items-center justify-center border-2 border-transparent">
+            <img src="./images/fotos-x300ultra/x300ultra-tratado.png" alt="Jovi X300 Ultra" class="w-full h-full object-cover">
+          </div>
+          <!-- Fotos Câmera -->
+          <img src="./images/fotos-x300ultra/1-foto-x300ultra.png" onclick="abrirModalImagem(this.src)" class="w-full h-40 md:h-64 object-cover rounded-3xl cursor-pointer hover:opacity-80 transition-all hover:scale-[1.02]">
+          <img src="./images/fotos-x300ultra/2-foto-x300ultra.png" onclick="abrirModalImagem(this.src)" class="w-full h-40 md:h-64 object-cover rounded-3xl cursor-pointer hover:opacity-80 transition-all hover:scale-[1.02]">
+          <img src="./images/fotos-x300ultra/3-foto-x300ultra.png" onclick="abrirModalImagem(this.src)" class="w-full h-40 md:h-64 object-cover rounded-3xl cursor-pointer hover:opacity-80 transition-all hover:scale-[1.02]">
+
+          <!-- === LINHA 2: X300 FE === -->
+          <!-- Foto Celular (Sem clique) -->
+          <div class="rounded-3xl overflow-hidden bg-gray-100 flex items-center justify-center border-2 border-blue-500">
+            <img src="./images/fotos-x300fe/x300fe-tratado.png" alt="Jovi X300 FE" class="w-full h-full object-cover">
+          </div>
+          <!-- Fotos Câmera -->
+          <img src="./images/fotos-x300fe/1-foto-x300fe.png" onclick="abrirModalImagem(this.src)" class="w-full h-40 md:h-64 object-cover rounded-3xl cursor-pointer hover:opacity-80 transition-all hover:scale-[1.02]">
+          <img src="./images/fotos-x300fe/2-foto-x300fe.png" onclick="abrirModalImagem(this.src)" class="w-full h-40 md:h-64 object-cover rounded-3xl cursor-pointer hover:opacity-80 transition-all hover:scale-[1.02]">
+          <img src="./images/fotos-x300fe/3-foto-x300fe.png" onclick="abrirModalImagem(this.src)" class="w-full h-40 md:h-64 object-cover rounded-3xl cursor-pointer hover:opacity-80 transition-all hover:scale-[1.02]">
+
+          <!-- === LINHA 3: V70 === -->
+          <!-- Foto Celular (Sem clique) -->
+          <div class="rounded-3xl overflow-hidden bg-gray-100 flex items-center justify-center border-2 border-transparent">
+            <img src="./images/fotos-v70/v70-tratado.png" alt="Jovi V70" class="w-full h-full object-cover">
+          </div>
+          <!-- Fotos Câmera -->
+          <img src="./images/fotos-v70/1-foto-v70.png" onclick="abrirModalImagem(this.src)" class="w-full h-40 md:h-64 object-cover rounded-3xl cursor-pointer hover:opacity-80 transition-all hover:scale-[1.02]">
+          <img src="./images/fotos-v70/2-foto-v70.png" onclick="abrirModalImagem(this.src)" class="w-full h-40 md:h-64 object-cover rounded-3xl cursor-pointer hover:opacity-80 transition-all hover:scale-[1.02]">
+          <img src="./images/fotos-v70/3-foto-v70.png" onclick="abrirModalImagem(this.src)" class="w-full h-40 md:h-64 object-cover rounded-3xl cursor-pointer hover:opacity-80 transition-all hover:scale-[1.02]">
+
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- MODAL DO SIMULADOR -->
+
+  <div id="simulador-modal" class="fixed inset-0 bg-[#2d2d2d] z-50 hidden flex-col items-center justify-center p-4 overflow-hidden">
+
+    <!-- Botão de Fechar no topo direito fixo na tela -->
+    <button onclick="fecharSimulador()" class="absolute top-4 right-4 md:top-6 md:right-6 bg-white rounded-full w-10 h-10 flex items-center justify-center text-blue-600 font-bold text-xl hover:bg-gray-200 transition-colors z-50 shadow-md">
+      &times;
+    </button>
+
+    <!-- Container Principal -->
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16 w-full h-full max-w-6xl">
+
+      <!-- Lado Esquerdo: Imagem do celular -->
+      <div class="flex flex-col items-center shrink-0">
+
+        <img id="img-aparelho-modal" src="./images/jovi-x300-ultra.png" alt="Jovi-x300-ultra" class="h-[25vh] md:h-[400px] object-contain drop-shadow-2xl transition-all">
+      </div>
+
+      <!-- Lado Direito: A Interface da Câmara -->
+      <div class="relative w-[90vw] max-w-[320px] h-[60vh] md:h-[650px] shrink-0 bg-black rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-900 flex flex-col font-sans select-none transition-all">
+
+        <!-- Topo (Flash, HDR, Config) -->
+        <div class="h-10 md:h-12 w-full flex items-center justify-between px-4 text-white text-xs z-20 shrink-0">
+          <span class="cursor-pointer">⚙️</span>
+          <span class="cursor-pointer text-yellow-400">⚡Flash</span>
+          <span class="cursor-pointer">HDR</span>
+          <span class="cursor-pointer font-bold">16:9</span>
+        </div>
+
+        <!-- Visor da Camera -->
+        <div class="relative flex-1 w-full bg-black flex items-center justify-center overflow-hidden">
+
+          <!-- Efeito Flash -->
+          <div id="efeito-flash" class="absolute inset-0 bg-white opacity-0 pointer-events-none z-30 transition-opacity duration-75"></div>
+
+          <!-- Imagem da paisagem da china -->
+          <img id="img-visor-modal" src="./images/paisagem-china.jpg" alt="Visor" class="absolute inset-0 w-full h-full object-cover">
+
+          <!-- Círculo de Foco Amarelo (Fixo no centro) | característico dos celulares da Jovi -->
+          <div class="absolute w-12 h-12 md:w-16 md:h-16 rounded-full border border-yellow-400 z-20 pointer-events-none flex items-center justify-center">
+            <div class="w-1 h-1 bg-yellow-400 rounded-full"></div>
+          </div>
+
+          <!-- Grade (Regra dos Terços) -->
+          <div class="absolute inset-0 pointer-events-none flex flex-col justify-between py-[33%] z-10">
+            <div class="w-full h-[1px] bg-white/30"></div>
+            <div class="w-full h-[1px] bg-white/30"></div>
+          </div>
+          <div class="absolute inset-0 pointer-events-none flex justify-between px-[33%] z-10">
+            <div class="h-full w-[1px] bg-white/30"></div>
+            <div class="h-full w-[1px] bg-white/30"></div>
+          </div>
+
+          <!-- Lentes de Zoom (Na lateral direita da foto) -->
+          <div class="absolute right-2 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-20">
+            <span class="text-white text-[9px] md:text-[10px] bg-black/50 px-1 rounded-full cursor-pointer hover:bg-black">0.5x</span>
+            <span class="text-yellow-400 font-bold text-[9px] md:text-[10px] bg-black/80 px-1 rounded-full cursor-pointer">1x</span>
+            <span class="text-white text-[9px] md:text-[10px] bg-black/50 px-1 rounded-full cursor-pointer hover:bg-black">3x</span>
+          </div>
+        </div>
+
+        <!-- Rodapé da camera -->
+        <div class="h-28 md:h-40 w-full bg-black z-20 flex flex-col shrink-0">
+
+          <!-- Menu Rolante (Dia e Noite, Retrato, Foto, etc) -->
+          <div class="flex items-center gap-4 px-4 md:px-6 overflow-x-auto no-scrollbar py-2 text-xs md:text-sm text-gray-400 whitespace-nowrap">
+            <span class="cursor-pointer">Dia e Noite</span>
+            <span class="cursor-pointer">Retrato</span>
+            <span class="text-yellow-400 font-bold cursor-pointer">Foto</span>
+            <span class="cursor-pointer">Vídeo</span>
+            <span class="cursor-pointer">Vídeo retrato</span>
+          </div>
+
+          <!-- Botões Finais (Galeria, botão de tirar foto e Virar) -->
+          <div class="flex-1 flex items-center justify-between px-6 md:px-8 pb-2">
+
+            <!-- Galeria -->
+            <div class="w-8 h-8 md:w-10 md:h-10 rounded-sm bg-gray-800 overflow-hidden border border-gray-600">
+              <img id="img-miniatura-modal" src="./images/paisagem-china.jpg" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Botão de Disparo Amarelo -->
+            <div onclick="tirarFoto()" class="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-yellow-400 flex items-center justify-center cursor-pointer hover:scale-95 transition-transform">
+              <div class="w-9 h-9 md:w-12 md:h-12 rounded-full border-2 border-white bg-transparent"></div>
+            </div>
+
+            <!-- Virar Camera -->
+            <div class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-white cursor-pointer">
+              <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- vetor para o ícone de virar a câmera (peguei na internet) -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal de Imagem em Tela Cheia -->
+  <div id="modal-imagem-inteira" class="fixed inset-0 z-[100] hidden bg-black/90 items-center justify-center p-4 cursor-pointer backdrop-blur-sm transition-opacity" onclick="fecharModalImagem()">
+
+    <!-- Botão de Fechar -->
+    <span class="absolute top-6 right-6 text-white text-5xl font-light hover:text-gray-300 transition-colors">&times;</span>
+
+    <!-- Imagem Ampliada -->
+    <img id="imagem-ampliada" src="" class="max-w-full max-h-[90vh] rounded-xl shadow-2xl cursor-default object-contain" onclick="event.stopPropagation()">
+
+  </div>
+
+
+
+
+</body>
+
+</html>

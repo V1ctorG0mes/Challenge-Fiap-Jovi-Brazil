@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import url('https://fonts.cdnfonts.com/css/sansation');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@500;700&display=swap');
+
+@theme {
+  --color-azul-jovi: #0000EE;
+  --color-azul-jovi-hover: #0000BB;
+}
+
+/* Classe personalizada para facilitar o uso no HTML */
+.font-sansation {
+  font-family: 'Sansation', sans-serif;
+}
+
+/* Classe para títulos grandes e nomes dos celulares */
+.font-jovi-titulo {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Classe para textos e descrições */
+.font-jovi-texto {
+  font-family: 'Inter', sans-serif;
+}
