@@ -1,2 +1,5 @@
 *.css linguist-generated=true
 *.html linguist-generated=true
+*.js linguist-vendored=false
+*.js linguist-generated=false
+*.js linguist-detectable=true
