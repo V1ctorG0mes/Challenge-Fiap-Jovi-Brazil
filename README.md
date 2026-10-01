@@ -4,7 +4,7 @@ Projeto de front-end desenvolvido como parte do **FIAP Challenge**. O site simul
 
 🚀 Sobre o Projeto
 
-O objetivo deste projeto é entregar uma experiência imersiva e responsiva para apresentar os celulares da linha Jovi. O grande diferencial do site é o **Simulador de Câmera**, um modal interativo que replica a interface (UI) nativa do telemóvel, incluindo controles de zoom, flash, HDR, disparador e proporção de ecrã.
+O objetivo deste projeto é entregar uma experiência imersiva e responsiva para apresentar os celulares da linha Jovi. O grande diferencial do site é o **Simulador de Câmera**, um modal interativo que replica a interface (UI) nativa do celular, incluindo controles de zoom, flash, HDR, disparador e proporção de ecrã.
 
 Principais Funcionalidades
 
@@ -18,5 +18,5 @@ Tecnologias Utilizadas
 
 - **HTML5:** Estrutura semântica.
 - **CSS3 / Tailwind CSS (v4):** Estilização através de classes utilitárias e criação de temas customizados (ex: `--color-azul-jovi`).
-- **JavaScript (Vanilla):** Lógica do simulador, alternância de abas e controlo de modais.
+- **JavaScript (Vanilla):** Lógica do simulador, alternância de abas e controle de modais.
 - **Node.js / NPM:** Para gestão do processo de compilação (build/watch) do Tailwind CSS.
