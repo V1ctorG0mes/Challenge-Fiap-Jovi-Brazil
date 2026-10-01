@@ -1,3 +1,5 @@
+(Html, Tailwind Css e JavaScript)
+
 # Challenge-Fiap-Jovi-Brazil
 Experiência imersiva e responsiva para apresentar os celulares da linha Jovi.
 Projeto de front-end desenvolvido como parte do **FIAP Challenge**. O site simula a landing page e a interface web da **Jovi**, uma marca asiática focada em smartphones de alto desempenho com tecnologia de ponta em fotografia (modelos X300 Ultra, X300 FE e V70).
